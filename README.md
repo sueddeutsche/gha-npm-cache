@@ -17,6 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: sueddeutsche/gha-npm-cache
+      - uses: sueddeutsche/gha-npm-cache@v1
       - run: npm i
 ```
