@@ -1,0 +1,13 @@
+name: NPM Cache
+description: Cache npm
+runs:
+  using: composite
+  steps:
+    - uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-build-npmcache-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-npmcache-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
